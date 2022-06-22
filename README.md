@@ -20,6 +20,6 @@ Follow the guide [here](https://angular.io/guide/setup-local#prerequisites "Angu
 
 [![Angular Cli Version](https://img.shields.io/badge/Angular_CLI-14.0.2-brightgreen)](https://angular.io/) [![node-version](https://img.shields.io/badge/Node-16.14.2-brightgreen)](https://nodejs.org/en/) [![npm-version](https://img.shields.io/badge/npm-8.12.2-brightgreen)](https://www.npmjs.com/package/%40angular/core/v/9.1.4)
 
-## [Further Help] (#angular-custom-toaster "Go to the top of the document")
+## [Further Help](#angular-custom-toaster "Go to the top of the document")
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
