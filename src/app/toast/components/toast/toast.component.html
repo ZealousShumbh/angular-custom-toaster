@@ -1,0 +1,52 @@
+<ng-template #toastTemplate let-toastTemplateData>
+    <div *ngIf="toastTemplateData.toastsArray.length > 0" class="toast-container position-absolute"
+        [ngClass]="getToastPositionClass(toastTemplateData.position)" style="z-index: 1100;">
+        <div *ngFor="let toast of toastTemplateData.toastsArray; index as i">
+            <div class="toast show mt-2" [ngClass]="getToastColorClass(toast.type)" role="alert" aria-live="assertive"
+                aria-atomic="true">
+                <div class="toast-header">
+                    <strong class="me-auto">{{toast.title}}</strong>
+                    <button type="button" class="btn-close" aria-label="Close"
+                        (click)="removeToast(toast.position, i)"></button>
+                </div>
+                <div class="toast-body">{{toast.message}}</div>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template
+    *ngTemplateOutlet="toastTemplate; context: { $implicit: { toastsArray: currentTopLeftToasts, position: 0 } }">
+</ng-template>
+
+<ng-template
+    *ngTemplateOutlet="toastTemplate; context: { $implicit: { toastsArray: currentMiddleLeftToasts, position: 1 } }">
+</ng-template>
+
+<ng-template
+    *ngTemplateOutlet="toastTemplate; context: { $implicit: { toastsArray: currentBottomLeftToasts, position: 2 } }">
+</ng-template>
+
+<ng-template
+    *ngTemplateOutlet="toastTemplate; context: { $implicit: { toastsArray: currentTopCenterToasts, position: 3 } }">
+</ng-template>
+
+<ng-template
+    *ngTemplateOutlet="toastTemplate; context: { $implicit: { toastsArray: currentMiddleCenterToasts, position: 4 } }">
+</ng-template>
+
+<ng-template
+    *ngTemplateOutlet="toastTemplate; context: { $implicit: { toastsArray: currentBottomCenterToasts, position: 5 } }">
+</ng-template>
+
+<ng-template
+    *ngTemplateOutlet="toastTemplate; context: { $implicit: { toastsArray: currentTopRightToasts, position: 6 } }">
+</ng-template>
+
+<ng-template
+    *ngTemplateOutlet="toastTemplate; context: { $implicit: { toastsArray: currentMiddleRightToasts, position: 7 } }">
+</ng-template>
+
+<ng-template
+    *ngTemplateOutlet="toastTemplate; context: { $implicit: { toastsArray: currentBottomRightToasts, position: 8 } }">
+</ng-template>
